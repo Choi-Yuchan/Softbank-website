@@ -1,0 +1,36 @@
+.menu-link {
+  position: relative;
+  -webkit-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+  display: inline-block;
+  padding-right: 27px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.menu-link::before {
+  content: "";
+  display: block;
+  border-top: solid 2px #0080f4;
+  border-right: solid 2px #0080f4;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -5px;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.up-btn::before {
+  content: "";
+  display: block;
+  border-top: solid 2px #fefefe;
+  border-right: solid 2px #fefefe;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  opacity: 1;
+}

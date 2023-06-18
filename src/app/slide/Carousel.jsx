@@ -4,6 +4,7 @@ import { flushSync } from "react-dom";
 import imageByIndex from "./imageByIndex";
 import Image from "next/image";
 import { DotButton, PrevButton, NextButton } from "./CarouselArrowsDotsButtons";
+import Autoplay from "embla-carousel-autoplay";
 
 const TWEEN_FACTOR = 4.2;
 
@@ -12,7 +13,7 @@ const numberWithinRange = (number, min, max) =>
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
   const [tweenValues, setTweenValues] = useState([]);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -85,8 +86,8 @@ const EmblaCarousel = (props) => {
 
   return (
     <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+      <div className="embla__viewport flex justify-center" ref={emblaRef}>
+        <div className="embla__container lg:w-2/5">
           {slides.map((index) => (
             <div
               className="embla__slide"
@@ -99,7 +100,7 @@ const EmblaCarousel = (props) => {
                 <span>{index + 1}</span>
               </div>
               <Image
-                className="embla__slide__img"
+                className="embla__slide__img rounded-lg"
                 src={imageByIndex(index)}
                 alt="Your alt text"
               />
