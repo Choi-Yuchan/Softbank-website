@@ -40,8 +40,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
-      <header className="w-full flex flex-col bg-black bg-opacity-90 text-white items-center py-40 px-16">
-        <div className="mb-16 relative w-[383px] aspect-[500/73]">
+      <header className="w-full flex flex-col bg-black bg-opacity-90 text-white items-center py-20 px-8 md:py-40 md:px-16 ">
+        <div className="mb-16 relative w-2/3 md:w-[383px] aspect-[500/73] ">
           <Image
             src="/images/logo-sb-white.png"
             alt="SoftBank logo"
@@ -69,7 +69,7 @@ export default function Home() {
         <div>
           <Image src={FooterLogo} width={192} height={28} alt="footer-logo" />
         </div>
-        <div className="w-1/2 text-xs text-center pb-4">
+        <div className="w-1/2 text-[0.5rem] md:text-xs text-center pb-4">
           <span className="pr-1">| Information Security</span>
           <span className="pr-1">| Privacy Center</span>
           <span className="pr-1">| Site Policy</span>

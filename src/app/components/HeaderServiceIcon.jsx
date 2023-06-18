@@ -37,15 +37,12 @@ export default function HeaderServiceIcon() {
   return (
     <div className="flex items-center justify-between">
       {HEADER_SERVICES.map((item, index) => (
-        <div className="flex flex-col items-center" key={index}>
-          <a href={item.href}>
-            <Image
-              src={item.src}
-              width={86}
-              height={86}
-              alt="Header Icon"
-            ></Image>
-            <p className="mt-2">{item.service}</p>
+        <div className="flex" key={index}>
+          <a href={item.href} className="flex flex-col items-center">
+            <div className="relative w-10 h-10 md:w-[86px] md:h-[86px]">
+              <Image src={item.src} fill alt="Header Icon"></Image>
+            </div>
+            <p className="mt-2 text-xs md:text-base">{item.service}</p>
           </a>
         </div>
       ))}

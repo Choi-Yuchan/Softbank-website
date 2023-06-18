@@ -22,12 +22,12 @@ const UTILITY_ICONS = [
 ];
 export default function UtilityIcon() {
   return (
-    <div className="flex items-center justify-around w-3/4 lg:w-2/5">
+    <div className="flex items-center justify-around w-full md:w-3/4 lg:w-2/5">
       {UTILITY_ICONS.map((item, index) => (
         <div className="flex items-center" key={index}>
           <a href={item.href} className="flex items-center">
             <Image src={item.src} className="mr-2" alt="utility icon" />
-            {item.title}
+            <p className="text-sm md:text-base">{item.title}</p>
           </a>
         </div>
       ))}

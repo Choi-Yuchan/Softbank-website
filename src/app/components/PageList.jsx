@@ -60,7 +60,7 @@ const PAGE_LIST = [
 ];
 export default function PageList() {
   return (
-    <div className="lg:w-2/3 mx-auto grid grid-cols-2 gap-4">
+    <div className="lg:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 ">
       {PAGE_LIST.map((list, index) => (
         <div
           className=" bg-slate-50 flex items-center flex-col rounded-lg pb-4"
@@ -87,9 +87,9 @@ export default function PageList() {
             <div className="w-full pr-5 pl-5">
               <div className="menu-link my-3">{list.menuLink.title}</div>
               <hr />
-              <div className="grid grid-cols-2 p-5">
+              <div className="grid grid-cols-2 gap-y-4 p-5 ">
                 {list.menuLink.link.map((link, index) => (
-                  <div className="menu-link" key={index}>
+                  <div className="menu-link text-xs md:text-base" key={index}>
                     {link}
                   </div>
                 ))}
